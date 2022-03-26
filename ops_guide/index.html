@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>雅果运维手册 | 雅果内部管理平台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="本文主要关于雅果前端控制系统的使用说明. 名词解释   名词 解释 备注    前端控制系统 智能控制单元板发光的系统    工控机&#x2F;树莓派 部署前端控制系统的设备    单元板 安装在斑马线两边的发光板    灯带 最小的发光设备 一块单元板有2&#x2F;3&#x2F;4条灯带   芯片 单元板上所有灯带的控制单元 每块芯片占用一个地址码   地址码 芯片烧录时指定的十六进制编号 一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="雅果运维手册">
+<meta property="og:url" content="http://vpn.argusai.net/ops_guide/index.html">
+<meta property="og:site_name" content="雅果内部管理平台">
+<meta property="og:description" content="本文主要关于雅果前端控制系统的使用说明. 名词解释   名词 解释 备注    前端控制系统 智能控制单元板发光的系统    工控机&#x2F;树莓派 部署前端控制系统的设备    单元板 安装在斑马线两边的发光板    灯带 最小的发光设备 一块单元板有2&#x2F;3&#x2F;4条灯带   芯片 单元板上所有灯带的控制单元 每块芯片占用一个地址码   地址码 芯片烧录时指定的十六进制编号 一">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-09T07:17:00.000Z">
+<meta property="article:modified_time" content="2022-03-26T02:26:39.468Z">
+<meta property="article:author" content="Denley Hsiao">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="雅果内部管理平台" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">雅果内部管理平台</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://vpn.argusai.net"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ops_guide" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/ops_guide/" class="article-date">
+  <time class="dt-published" datetime="2020-08-09T07:17:00.000Z" itemprop="datePublished">2020-08-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/guide/">手册</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      雅果运维手册
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>本文主要关于雅果前端控制系统的使用说明.</p>
+<h1 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><table>
+<thead>
+<tr>
+<th align="center">名词</th>
+<th>解释</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">前端控制系统</td>
+<td>智能控制单元板发光的系统</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">工控机&#x2F;树莓派</td>
+<td>部署前端控制系统的设备</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">单元板</td>
+<td>安装在斑马线两边的发光板</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">灯带</td>
+<td>最小的发光设备</td>
+<td>一块单元板有2&#x2F;3&#x2F;4条灯带</td>
+</tr>
+<tr>
+<td align="center">芯片</td>
+<td>单元板上所有灯带的控制单元</td>
+<td>每块芯片占用一个地址码</td>
+</tr>
+<tr>
+<td align="center">地址码</td>
+<td>芯片烧录时指定的十六进制编号</td>
+<td>一条斑马线左右各占用一个地址码</td>
+</tr>
+<tr>
+<td align="center">缺省值</td>
+<td>配置参数不做修改时控制系统使用的默认值</td>
+<td>与针脚相关的缺省值都是针脚编号</td>
+</tr>
+<tr>
+<td align="center">针脚</td>
+<td>树莓派上与外界交互的硬件单元</td>
+<td>每个针脚都有相应的编号(详见附录)</td>
+</tr>
+</tbody></table>
+<h1 id="统一约定"><a href="#统一约定" class="headerlink" title="统一约定"></a>统一约定</h1><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>缺省值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>手机热点用户名</td>
+<td>argusai</td>
+<td></td>
+</tr>
+<tr>
+<td>手机热点密码</td>
+<td>12345678</td>
+<td>远程软件密码&#x2F;系统登陆密码</td>
+</tr>
+<tr>
+<td>主雷达IP</td>
+<td>192.168.0.10</td>
+<td>（激光）雷达默认出厂IP</td>
+</tr>
+<tr>
+<td>副雷达IP</td>
+<td>192.168.0.11</td>
+<td></td>
+</tr>
+<tr>
+<td>主机IP</td>
+<td>192.168.0.1</td>
+<td>（激光）雷达所在主机IP</td>
+</tr>
+<tr>
+<td>输入针脚2</td>
+<td>15</td>
+<td>红外线感应、温度计接入</td>
+</tr>
+<tr>
+<td>输入针脚1</td>
+<td>16</td>
+<td>红绿灯信号、照度计接入</td>
+</tr>
+<tr>
+<td>雷达针脚</td>
+<td>18</td>
+<td>控制雷达供电</td>
+</tr>
+<tr>
+<td>输出针脚1</td>
+<td>19</td>
+<td>控制带芯片单元板供电，控制<code>亮灯模式2</code></td>
+</tr>
+<tr>
+<td>输出针脚2</td>
+<td>21</td>
+<td>与输出针脚1搭配控制<code>亮灯模式3</code></td>
+</tr>
+</tbody></table>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><ol>
+<li>选择靠近控制箱的雷达作为主雷达;</li>
+<li>面对<code>倒装的</code>雷达，X值前负后正，Y值左正右负，地址码左大右小；</li>
+<li>靠近(主)雷达一边地址码为单数，反之双数；</li>
+</ol>
+<h1 id="前端控制系统"><a href="#前端控制系统" class="headerlink" title="前端控制系统"></a>前端控制系统</h1><p>本节中提到的系统如无明确提示的话，均指前端控制系统。</p>
+<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><ul>
+<li>首次使用<ol>
+<li>控制器接上鼠标、键盘、显示屏，显示屏电源线；</li>
+<li>接通电源后可以看到自动运行的系统；</li>
+<li>按”CTRL+C”暂时关闭此系统，单击桌面上的“argusai”文件配置系统参数：包括雷达扫描范围，亮灯模式等，完成后单击“保存”；</li>
+<li>单击左边中部红色雅果图标重新启动系统。</li>
+</ol>
+</li>
+<li>正常使用：控制器接通电源后系统自动运行；</li>
+</ul>
+<h2 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>参数名</th>
+<th align="center">取值范围</th>
+<th align="center">缺省值</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>斑马线距离雷达的最小x值</td>
+<td><code>fobid_x_min</code></td>
+<td align="center">0 ~ 25.0</td>
+<td align="center">0</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>斑马线距离雷达的最大x值</td>
+<td><code>fobid_x_max</code></td>
+<td align="center">0 ~ 25.0</td>
+<td align="center">5</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>斑马线距离雷达的最小y值</td>
+<td><code>fobid_y_min</code></td>
+<td align="center">-50.0 ~ 50.0</td>
+<td align="center">-5</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>斑马线距离雷达的最大y值</td>
+<td><code>fobid_y_max</code></td>
+<td align="center">-50.0 ~ 50.0</td>
+<td align="center">5</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>斑马线宽度</td>
+<td><code>zebra_width</code></td>
+<td align="center">&gt;0</td>
+<td align="center">1.0</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>斑马线前后跟随条数</td>
+<td><code>step</code></td>
+<td align="center">&gt;&#x3D;0</td>
+<td align="center">0</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>亮灯模式</td>
+<td><code>light_type</code></td>
+<td align="center">0 ~ 10</td>
+<td align="center">0</td>
+<td align="center">详见<code>亮灯模式</code>章节</td>
+</tr>
+<tr>
+<td>是否频闪</td>
+<td><code>is_blink</code></td>
+<td align="center">true&#x2F;false</td>
+<td align="center">true</td>
+<td align="center">true:频闪&#x2F;false:不频闪，专用于<code>亮灯模式2</code></td>
+</tr>
+<tr>
+<td>数据发送间隔</td>
+<td>output_interval_seconds</td>
+<td align="center">0 ~ 1</td>
+<td align="center">0.0</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>数据发送次数</td>
+<td>send_count</td>
+<td align="center">1 ~ 5</td>
+<td align="center">1</td>
+<td align="center">通过重发降低发送失败概率</td>
+</tr>
+<tr>
+<td>雷达类型</td>
+<td>laser_type</td>
+<td align="center">wr&#x2F;sick</td>
+<td align="center">wr</td>
+<td align="center">wr:机智人雷达&#x2F;sick:西克雷达</td>
+</tr>
+<tr>
+<td>雷达精度</td>
+<td>laser_is_standard</td>
+<td align="center">true&#x2F;false</td>
+<td align="center">true</td>
+<td align="center">true:标精度&#x2F;false: 高精</td>
+</tr>
+<tr>
+<td>副雷达相对主雷达的x值</td>
+<td><code>slave_x</code></td>
+<td align="center">-50.0 ~ 50.0</td>
+<td align="center">0</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>副雷达相对主雷达的y值</td>
+<td><code>slave_y</code></td>
+<td align="center">-50.0 ~ 50.0</td>
+<td align="center">0</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>副雷达类型</td>
+<td>slave_laser_type</td>
+<td align="center"></td>
+<td align="center">wr</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td>副雷达精度</td>
+<td>slave_laser_is_standard</td>
+<td align="center"></td>
+<td align="center">true</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td><strong>注</strong>:</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ol>
+<li>参数名中有<code>红色</code>字样的部分为经常需要修改的参数；</li>
+</ol>
+<h2 id="亮灯模式"><a href="#亮灯模式" class="headerlink" title="亮灯模式"></a>亮灯模式</h2><table>
+<thead>
+<tr>
+<th align="center">模式值</th>
+<th align="center">输入</th>
+<th align="center">输出</th>
+<th align="center">效果</th>
+<th align="left">备注</th>
+<th align="center">相关参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">雷达</td>
+<td align="center">串口</td>
+<td align="center">有人时跟随亮</td>
+<td align="left">雷达检测有人时走串口跟随亮</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">雷达</td>
+<td align="center">串口</td>
+<td align="center">有人时全亮</td>
+<td align="left">雷达检测有人时走串口全亮</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">雷达</td>
+<td align="center">针脚</td>
+<td align="center">有人时全亮</td>
+<td align="left">雷达检测有人时走针脚全亮</td>
+<td align="center">is_blink</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">雷达</td>
+<td align="center">针脚</td>
+<td align="center">有人时所在半边车道亮</td>
+<td align="left">雷达检测有人时走针脚所在半边车道亮</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">针脚</td>
+<td align="center">串口</td>
+<td align="center">输入低电平时全亮</td>
+<td align="left">针脚低电平时走串口全亮</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">针脚</td>
+<td align="center">针脚</td>
+<td align="center">输入低电平时全亮</td>
+<td align="left">针脚低电平时走(另一)针脚全亮</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://vpn.argusai.net/ops_guide/" data-id="cl178eleg0004dkorg0qy6hez" data-title="雅果运维手册" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/fei_tian_secret_dog/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          雅果用户手册
+        
+      </div>
+    </a>
+  
+  
+    <a href="/NOTICE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">注意事项</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/guide/">手册</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/total_resource/">物料汇总</a>
+          </li>
+        
+          <li>
+            <a href="/software_download/">下载更新</a>
+          </li>
+        
+          <li>
+            <a href="/fei_tian_secret_dog/">雅果用户手册</a>
+          </li>
+        
+          <li>
+            <a href="/ops_guide/">雅果运维手册</a>
+          </li>
+        
+          <li>
+            <a href="/NOTICE/">注意事项</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Denley Hsiao<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

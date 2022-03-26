@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>雅果用户手册 | 雅果内部管理平台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="目前所有默认参数都是针对k40的一直针脚全亮模式，以便首次调试时能立即看到效果。 修改说明 单击桌面上的“雅果配置文件“快捷方式，打开后即可修改; 修改相应参数值时”:”后要有一个空格 ; 如无特殊说明，这里的“针脚”统一指“树莓派针脚”; 序号列也代表参数所在配置文件的行号; 参数名列为灰色框选时表示建议修改项，其它为可选修改项. 修改后有如下方式生效  修改参数后要点击保存后关闭此文件； 重启">
+<meta property="og:type" content="article">
+<meta property="og:title" content="雅果用户手册">
+<meta property="og:url" content="http://vpn.argusai.net/user_guide/index.html">
+<meta property="og:site_name" content="雅果内部管理平台">
+<meta property="og:description" content="目前所有默认参数都是针对k40的一直针脚全亮模式，以便首次调试时能立即看到效果。 修改说明 单击桌面上的“雅果配置文件“快捷方式，打开后即可修改; 修改相应参数值时”:”后要有一个空格 ; 如无特殊说明，这里的“针脚”统一指“树莓派针脚”; 序号列也代表参数所在配置文件的行号; 参数名列为灰色框选时表示建议修改项，其它为可选修改项. 修改后有如下方式生效  修改参数后要点击保存后关闭此文件； 重启">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://vpn.argusai.net/images/wiring_pin.png">
+<meta property="article:published_time" content="2020-07-15T03:09:00.000Z">
+<meta property="article:modified_time" content="2022-03-26T02:26:39.472Z">
+<meta property="article:author" content="Denley Hsiao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://vpn.argusai.net/images/wiring_pin.png">
+  
+    <link rel="alternate" href="/atom.xml" title="雅果内部管理平台" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">雅果内部管理平台</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://vpn.argusai.net"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-user_guide" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/user_guide/" class="article-date">
+  <time class="dt-published" datetime="2020-07-15T03:09:00.000Z" itemprop="datePublished">2020-07-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/guide/">手册</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      雅果用户手册
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>目前所有默认参数都是针对k40的一直针脚全亮模式，以便首次调试时能立即看到效果。</p>
+<h1 id="修改说明"><a href="#修改说明" class="headerlink" title="修改说明"></a>修改说明</h1><ul>
+<li>单击桌面上的“雅果配置文件“快捷方式，打开后即可修改;</li>
+<li>修改相应参数值时”:”后要有一个空格<code> </code>;</li>
+<li>如无特殊说明，这里的“针脚”统一指“树莓派针脚”;</li>
+<li><code>序号</code>列也代表参数所在配置文件的行号;</li>
+<li><code>参数名</code>列为灰色框选时表示建议修改项，其它为可选修改项.</li>
+<li>修改后有如下方式生效<blockquote>
+<ol>
+<li>修改参数后要点击保存后关闭此文件；</li>
+<li>重启系统，有以下两种方式</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h1 id="修改扫描区域"><a href="#修改扫描区域" class="headerlink" title="修改扫描区域"></a>修改扫描区域</h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>fobid_x_min</code></td>
+<td align="left">0</td>
+<td>斑马线距离雷达的最小x值</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>fobid_x_max</code></td>
+<td align="left">5</td>
+<td>斑马线距离雷达的最大x值</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>fobid_y_min</code></td>
+<td align="left">-5</td>
+<td>斑马线距离雷达的最小y值</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>fobid_y_max</code></td>
+<td align="left">5</td>
+<td>斑马线距离雷达的最大y值</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><em>注</em></p>
+<ul>
+<li>亮灯模式为7&#x2F;8时无需设置扫描区域.</li>
+<li>面对<code>倒装的</code>雷达，人与雷达两点所在的直线为x方向，左右手所在的(即与x垂直的)直线为y方向;</li>
+<li>x值前负后正，y值左正右负;</li>
+</ul>
+<h1 id="修改亮灯模式"><a href="#修改亮灯模式" class="headerlink" title="修改亮灯模式"></a>修改亮灯模式</h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td><code>light_type</code></td>
+<td align="left">8</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="串口跟随"><a href="#串口跟随" class="headerlink" title="串口跟随"></a>串口跟随</h2><p>当雷达检测到有人时跟随亮；采用雷达输入，485串口输出。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值&#x2F;修改值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td><code>light_type</code></td>
+<td align="left">8&#x2F;0</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>zebra_width</code></td>
+<td align="left">1.0</td>
+<td>斑马线宽度</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>step</code></td>
+<td align="left">0</td>
+<td>斑马线前后跟随条数</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>output_comm_type</td>
+<td align="left">1</td>
+<td>输出通信方式</td>
+<td>0为模拟通信;1为串口通信</td>
+</tr>
+<tr>
+<td>9</td>
+<td>output_port</td>
+<td align="left">&#x2F;dev&#x2F;ttyUSB0</td>
+<td>输出串口号</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>output_baudrate</td>
+<td align="left">9600</td>
+<td>输出串口波特率</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><em>注</em></p>
+<ul>
+<li>如果<code>8</code>号参数设为0时，后面的<code>9/10</code>号参数无需设置；</li>
+<li>后续<code>参数名</code>中带有<code>_comm_type</code>后缀的都可同上类似操作;</li>
+</ul>
+<h2 id="串口全亮"><a href="#串口全亮" class="headerlink" title="串口全亮"></a>串口全亮</h2><p>当雷达检测到有人时全亮；同样采用雷达输入，485串口输出。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值&#x2F;修改值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td><code>light_type</code></td>
+<td align="left">8&#x2F;1</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>output_comm_type</td>
+<td align="left">1</td>
+<td>输出通信方式</td>
+<td>0为模拟通信;1为串口通信</td>
+</tr>
+<tr>
+<td>9</td>
+<td>output_port</td>
+<td align="left">&#x2F;dev&#x2F;ttyUSB0</td>
+<td>输出串口号</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>output_baudrate</td>
+<td align="left">9600</td>
+<td>输出串口波特率</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="针脚跟随"><a href="#针脚跟随" class="headerlink" title="针脚跟随"></a>针脚跟随</h2><p>当雷达检测到有人时跟随亮；采用雷达输入，DAM盒子输出。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值&#x2F;修改值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td><code>light_type</code></td>
+<td align="left">8&#x2F;2</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>zebra_width</code></td>
+<td align="left">1.0</td>
+<td>斑马线宽度</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>step</code></td>
+<td align="left">0</td>
+<td>斑马线前后跟随条数</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>output_pin</td>
+<td align="left">19</td>
+<td>单元板供电针脚</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>gpio_type</code></td>
+<td align="left">1&#x2F;2</td>
+<td>GPIO类型</td>
+<td>1为树莓派针脚;2为DAM盒子</td>
+</tr>
+</tbody></table>
+<h2 id="针脚全亮"><a href="#针脚全亮" class="headerlink" title="针脚全亮"></a>针脚全亮</h2><p>当雷达检测到有人时全亮；同样采用雷达输入，DAM盒子输出。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值&#x2F;修改值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td><code>light_type</code></td>
+<td align="left">8&#x2F;3</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="针脚半亮"><a href="#针脚半亮" class="headerlink" title="针脚半亮"></a>针脚半亮</h2><p>当雷达检测到有人时所在半边车道亮；采用雷达输入，针脚输出。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值&#x2F;修改值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td><code>light_type</code></td>
+<td align="left">8&#x2F;4</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="针脚串口全亮"><a href="#针脚串口全亮" class="headerlink" title="针脚串口全亮"></a>针脚串口全亮</h2><p>当针脚高电平时全亮；采用针脚开关输入，485串口输出。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值&#x2F;修改值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td><code>light_type</code></td>
+<td align="left">8&#x2F;5</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="针脚针脚全亮"><a href="#针脚针脚全亮" class="headerlink" title="针脚针脚全亮"></a>针脚针脚全亮</h2><p>当针脚高电平时全亮；采用针脚开关输入，针脚输出。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值&#x2F;修改值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td><code>light_type</code></td>
+<td align="left">8&#x2F;6</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="一直串口全亮"><a href="#一直串口全亮" class="headerlink" title="一直串口全亮"></a>一直串口全亮</h2><p>一直全亮；采用485串口输出。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值&#x2F;修改值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td><code>light_type</code></td>
+<td align="left">8&#x2F;7</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="一直针脚全亮"><a href="#一直针脚全亮" class="headerlink" title="一直针脚全亮"></a>一直针脚全亮</h2><p>一直全亮；采用针脚输出。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值&#x2F;修改值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td><code>light_type</code></td>
+<td align="left">8&#x2F;8</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="修改针脚"><a href="#修改针脚" class="headerlink" title="修改针脚"></a>修改针脚</h1><p>针对树莓派上的某个针脚有问题时，用其它针脚替换；如下图为所有<a target="_blank" rel="noopener" href="https://pinout.xyz/">针脚定义</a>，其中中间数字为针脚编号</p>
+<p><img src="/images/wiring_pin.png"></p>
+<p><em>注</em></p>
+<ul>
+<li>替换时需要参考以下针脚图，只能替换成带<code>WiringPi</code>字样的针脚;</li>
+<li>6号针脚为接地，可用9、14、20、25、30、34、39等替换;</li>
+<li>1、17号针脚提供3.3V电源;</li>
+<li>2、4号针脚提供5V电源</li>
+</ul>
+<h1 id="修改雷达"><a href="#修改雷达" class="headerlink" title="修改雷达"></a>修改雷达</h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值&#x2F;修改值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>laser_type</td>
+<td align="left">wr</td>
+<td>主雷达型号</td>
+<td>wr为机智人雷达;k40为k40雷达</td>
+</tr>
+<tr>
+<td></td>
+<td>laser_is_standard</td>
+<td align="left">true</td>
+<td>主雷达是否为标准精度</td>
+<td>true为标精;false为高精</td>
+</tr>
+<tr>
+<td></td>
+<td>second_laser_type</td>
+<td align="left">wr</td>
+<td>副雷达型号</td>
+<td>wr为机智人雷达;k40为k40雷达</td>
+</tr>
+<tr>
+<td></td>
+<td>second_is_standard</td>
+<td align="left">true</td>
+<td>副雷达是否为标准精度</td>
+<td>true为标精;false为高精</td>
+</tr>
+<tr>
+<td></td>
+<td>is_zebra_on_x</td>
+<td align="left">false</td>
+<td>斑马线是否在x方向上</td>
+<td>true为在;false为不在</td>
+</tr>
+</tbody></table>
+<p><em>注</em></p>
+<ul>
+<li>当主雷达型号为k40时, is_zebra_on_x要设为true</li>
+</ul>
+<h1 id="修改参数汇总"><a href="#修改参数汇总" class="headerlink" title="修改参数汇总"></a>修改参数汇总</h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>参数名</th>
+<th align="left">默认值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>fobid_x_min</code></td>
+<td align="left">0</td>
+<td>斑马线距离雷达的最小x值</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>fobid_x_max</code></td>
+<td align="left">5</td>
+<td>斑马线距离雷达的最大x值</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>fobid_y_min</code></td>
+<td align="left">-5</td>
+<td>斑马线距离雷达的最小y值</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>fobid_y_max</code></td>
+<td align="left">5</td>
+<td>斑马线距离雷达的最大y值</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>zebra_width</td>
+<td align="left">1.0</td>
+<td>斑马线宽度</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>step</td>
+<td align="left">0</td>
+<td>斑马线前后跟随条数</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>light_type</code></td>
+<td align="left">0</td>
+<td>亮灯模式</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>gpio_type</td>
+<td align="left">1</td>
+<td>GPIO类型</td>
+<td>1为树莓派针脚;2为DAM盒子</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>laser_type</code></td>
+<td align="left">wr</td>
+<td>主雷达型号</td>
+<td>wr为机智人雷达;k40为k40雷达</td>
+</tr>
+<tr>
+<td>10</td>
+<td>laser_is_standard</td>
+<td align="left">true</td>
+<td>主雷达是否为标准精度</td>
+<td>true为标精;false为高精</td>
+</tr>
+<tr>
+<td>11</td>
+<td>second_laser_type</td>
+<td align="left">wr</td>
+<td>副雷达型号</td>
+<td>wr为机智人雷达;k40为k40雷达</td>
+</tr>
+<tr>
+<td>12</td>
+<td>second_is_standard</td>
+<td align="left">true</td>
+<td>副雷达是否为标准精度</td>
+<td>true为标精;false为高精</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>is_zebra_on_x</code></td>
+<td align="left">false</td>
+<td>斑马线是否在x方向上</td>
+<td>true为在;false为不在</td>
+</tr>
+<tr>
+<td>14</td>
+<td>is_follow</td>
+<td align="left">true</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>is_blink</td>
+<td align="left">false</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>has_car_light</td>
+<td align="left">false</td>
+<td>是否有车照灯</td>
+<td>true为有;false为没有</td>
+</tr>
+<tr>
+<td>17</td>
+<td>is_inversion_address</td>
+<td align="left">false</td>
+<td>地址码是否装反</td>
+<td>false为没有装反;true为装反</td>
+</tr>
+<tr>
+<td>18</td>
+<td>haz_rviz</td>
+<td align="left">true</td>
+<td>是否打开图形界面</td>
+<td>true为打开;false为不打开</td>
+</tr>
+<tr>
+<td>19</td>
+<td>input_pin</td>
+<td align="left">16</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>second_input_pin</td>
+<td align="left">15</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td>laser_power_pin</td>
+<td align="left">18</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>output_pin</td>
+<td align="left">19</td>
+<td>单元板供电针脚</td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td>second_output_pin</td>
+<td align="left">21</td>
+<td>针脚</td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>third_output_pin</td>
+<td align="left">22</td>
+<td>针脚</td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td>forth_output_pin</td>
+<td align="left">23</td>
+<td>针脚</td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>input_interval_seconds</td>
+<td align="left">0.3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>output_interval_seconds</td>
+<td align="left">0.3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td>input_comm_type</td>
+<td align="left">1</td>
+<td>第一输入通信方式</td>
+<td>0为模拟通信;1为串口通信</td>
+</tr>
+<tr>
+<td>29</td>
+<td>input_port</td>
+<td align="left">&#x2F;dev&#x2F;ttyUSB1</td>
+<td>第一输入串口号</td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td>input_baudrate</td>
+<td align="left">9600</td>
+<td>第一输入串口波特率</td>
+<td></td>
+</tr>
+<tr>
+<td>31</td>
+<td><code>output_comm_type</code></td>
+<td align="left">1</td>
+<td>第一输出通信方式</td>
+<td>0为模拟通信;1为串口通信</td>
+</tr>
+<tr>
+<td>32</td>
+<td>output_port</td>
+<td align="left">&#x2F;dev&#x2F;ttyUSB0</td>
+<td>第一输出串口号</td>
+<td></td>
+</tr>
+<tr>
+<td>33</td>
+<td>output_baudrate</td>
+<td align="left">9600</td>
+<td>第一输出串口波特率</td>
+<td></td>
+</tr>
+<tr>
+<td>34</td>
+<td>second_output_comm_type</td>
+<td align="left">1</td>
+<td>第二输出通信方式</td>
+<td>0为模拟通信;1为串口通信</td>
+</tr>
+<tr>
+<td>35</td>
+<td>second_output_port</td>
+<td align="left">&#x2F;dev&#x2F;ttyUSB1</td>
+<td>第二输出串口号</td>
+<td></td>
+</tr>
+<tr>
+<td>36</td>
+<td>second_output_baudrate</td>
+<td align="left">9600</td>
+<td>第二输出串口波特率</td>
+<td></td>
+</tr>
+<tr>
+<td>37</td>
+<td>duration_seconds</td>
+<td align="left">3.0</td>
+<td>持续亮灯时间</td>
+<td>k40建议设为8.0</td>
+</tr>
+<tr>
+<td>38</td>
+<td>all_light_sync_seconds</td>
+<td align="left">20.0</td>
+<td>全亮同步时间</td>
+<td></td>
+</tr>
+<tr>
+<td>39</td>
+<td>light_duration_seconds</td>
+<td align="left">0.3</td>
+<td>亮灯时间</td>
+<td></td>
+</tr>
+<tr>
+<td>40</td>
+<td>dark_duration_seconds</td>
+<td align="left">0.3</td>
+<td>灭灯时间</td>
+<td>频闪时设为0.2</td>
+</tr>
+<tr>
+<td>41</td>
+<td>reopen_comm_duration_seconds</td>
+<td align="left">1800</td>
+<td>重启第一串口号时间</td>
+<td></td>
+</tr>
+<tr>
+<td>42</td>
+<td>start_seconds</td>
+<td align="left">0.2</td>
+<td>单元板上电等待时间</td>
+<td></td>
+</tr>
+<tr>
+<td>43</td>
+<td>light_seconds</td>
+<td align="left">3.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>44</td>
+<td>light_unit</td>
+<td align="left">1.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>45</td>
+<td>second_x</td>
+<td align="left">0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>46</td>
+<td>second_y</td>
+<td align="left">0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>47</td>
+<td>core_type</td>
+<td align="left">1</td>
+<td>加密类型</td>
+<td>0为不使用加密狗;1为飞天加密狗</td>
+</tr>
+<tr>
+<td>48</td>
+<td>server_address</td>
+<td align="left">127.0.0.1</td>
+<td>后台服务器地址</td>
+<td></td>
+</tr>
+<tr>
+<td>49</td>
+<td>server_port</td>
+<td align="left">9000</td>
+<td>后台服务器端口号</td>
+<td></td>
+</tr>
+<tr>
+<td>50</td>
+<td>position_x</td>
+<td align="left">0.0</td>
+<td>设备所在经度</td>
+<td></td>
+</tr>
+<tr>
+<td>51</td>
+<td>position_y</td>
+<td align="left">0.0</td>
+<td>设备所在纬度</td>
+<td></td>
+</tr>
+<tr>
+<td>52</td>
+<td>dev_id</td>
+<td align="left">“0”</td>
+<td>设备ID</td>
+<td></td>
+</tr>
+<tr>
+<td>53</td>
+<td>frame_size</td>
+<td align="left">6</td>
+<td>k40取点个数</td>
+<td></td>
+</tr>
+<tr>
+<td>54</td>
+<td>arrow_skip_frame</td>
+<td align="left">2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>55</td>
+<td>flash_figure</td>
+<td align="left">0</td>
+<td>轮闪花样</td>
+<td></td>
+</tr>
+<tr>
+<td>56</td>
+<td>valid_start_count</td>
+<td align="left">3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>57</td>
+<td>same_body_speed_limit</td>
+<td align="left">2.5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>58</td>
+<td>min_velocity</td>
+<td align="left">0.3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>59</td>
+<td>max_velocity</td>
+<td align="left">3.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>60</td>
+<td>min_cross_angle</td>
+<td align="left">-25.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>61</td>
+<td>max_cross_angle</td>
+<td align="left">25.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>62</td>
+<td>min_body_size</td>
+<td align="left">0.2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>63</td>
+<td>max_body_size</td>
+<td align="left">0.6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>64</td>
+<td>angle_limit_min</td>
+<td align="left">-180.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>65</td>
+<td>angle_limit_max</td>
+<td align="left">180.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>66</td>
+<td>start_min_velocity</td>
+<td align="left">1.5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>67</td>
+<td>start_max_velocity</td>
+<td align="left">11.11</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>68</td>
+<td>C0</td>
+<td align="left">0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>69</td>
+<td>C1</td>
+<td align="left">1.7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>70</td>
+<td>maxInterval</td>
+<td align="left">1.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>71</td>
+<td>beta</td>
+<td align="left">60.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>72</td>
+<td>axes_rotate</td>
+<td align="left">0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>73</td>
+<td>enable_break_detc</td>
+<td align="left">false</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>74</td>
+<td>serial_topic_name</td>
+<td align="left">“serial_msg”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>75</td>
+<td>zebra_frame_id</td>
+<td align="left">“zebra_frame”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>76</td>
+<td>pos_topic_name</td>
+<td align="left">“pos_cells”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>77</td>
+<td>frequency</td>
+<td align="left">5.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>78</td>
+<td>send_count</td>
+<td align="left">1</td>
+<td>串口重发次数</td>
+<td></td>
+</tr>
+<tr>
+<td>79</td>
+<td>address_count</td>
+<td align="left">2</td>
+<td>一条斑马线占用地址码个数</td>
+<td></td>
+</tr>
+<tr>
+<td>80</td>
+<td>zebra_show</td>
+<td align="left">0.55</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>81</td>
+<td>near_split_count</td>
+<td align="left">0.5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>82</td>
+<td>side_split_count</td>
+<td align="left">0.25</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>83</td>
+<td>chip_type</td>
+<td align="left">v2</td>
+<td>芯片版本</td>
+<td>v1为卢总带主控板版本;v2为卢总当前版本;v3为方工版本</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://vpn.argusai.net/user_guide/" data-id="cl178elel000bdkord4i13i47" data-title="雅果用户手册" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/more_support/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          更多支持
+        
+      </div>
+    </a>
+  
+  
+    <a href="/wr_laser/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">机智人雷达</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/guide/">手册</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/total_resource/">物料汇总</a>
+          </li>
+        
+          <li>
+            <a href="/software_download/">下载更新</a>
+          </li>
+        
+          <li>
+            <a href="/fei_tian_secret_dog/">雅果用户手册</a>
+          </li>
+        
+          <li>
+            <a href="/ops_guide/">雅果运维手册</a>
+          </li>
+        
+          <li>
+            <a href="/NOTICE/">注意事项</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Denley Hsiao<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
